@@ -9,9 +9,14 @@
 
 <body>
     <h1 id="text">Aniket</h1>
+    <button id="btn">change text</button>
     <script>
         let text = document.getElementById("text");
-        text.innerHTML = "Aniket ugare";
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            text.innerHTML = "Aniket ugare";
+        });
     </script>
 </body>
 

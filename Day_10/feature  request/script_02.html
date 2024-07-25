@@ -5,22 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #container {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: brown;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nihil iusto necessitatibus obcaecati ratione
+        illo velit nulla quas asperiores temporibus nemo a fugiat suscipit in architecto, repellat qui aliquam et.
+    </div>
+    <script>
 
+        let container = document.getElementById("container");
+
+        container.addEventListener("mouseover", () => {
+            container.style.background = "black";
+        })
+
+        container.addEventListener("mouseout", () => {
+            container.style.background = "brown";
+        })
+    </script>
 </body>
-<script>
-
-    let div = document.createElement("div");
-    let p = document.createElement("p");
-
-    p.innerHTML = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, alias!";
-
-    div.appendChild(p);
-
-    document.body.appendChild(div);
-
-</script>
 
 </html>

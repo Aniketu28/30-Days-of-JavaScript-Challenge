@@ -8,20 +8,23 @@
 </head>
 
 <body>
-    <ul id="list">
-        <li>A</li>
-        <li>B</li>
-        <li id="c">c</li>
-    </ul>
+    <div>
+        <input type="text" id="inputext">
+        <h1 id="text1"></h1>
+        <h2 id="text2"></h2>
+    </div>
     <script>
-        let list = document.getElementById("list");
-        let c = document.getElementById("c");
+        let inputext = document.getElementById("inputext");
+        let text1 = document.getElementById("text1");
+        let text2 = document.getElementById("text2");
 
-        list.removeChild(c);
+        inputext.addEventListener("keydown", (event) => {
+            text1.innerHTML = text1.innerHTML + event.key;
+        })
 
-        // while(list.hasChildNodes()){
-        //     list.removeChild(list.firstChild);
-        // }
+        inputext.addEventListener("keyup", (event) => {
+            text2.innerHTML = text2.innerHTML + event.key;
+        })
     </script>
 </body>
 

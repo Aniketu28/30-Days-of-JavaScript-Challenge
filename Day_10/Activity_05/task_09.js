@@ -1,6 +1,8 @@
-let text = document.getElementById("text-content");
-let changeBtn = document.getElementById("changeBtn");
+let ul = document.getElementById("ul");
 
-changeBtn.addEventListener("click",()=>{
-    text.innerHTML = "chai aur code";
+ul.addEventListener("click",(event)=>{
+    if (event.target.tagName === 'LI') {
+        let text = event.target.textContent; 
+        console.log(text); 
+    }
 })

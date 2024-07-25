@@ -8,10 +8,33 @@
 </head>
 
 <body>
-    <img id="img" src="" alt="">
+    <form action="#">
+        <input type="text" id="name">
+        <input type="number" id="number">
+        <select id="select">
+            <option selected value="a">a</option>
+            <option value="b">b</option>
+        </select>
+        <input type="submit" id="submit" value="submit">
+    </form>
     <script>
-        let img = document.getElementById("img");
-        img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWniGwCL-NPYtw78b-HQMInFiQh0HGVEDoQA&s";
+        let name = document.getElementById("name");
+        let number = document.getElementById("number");
+        let submit = document.getElementById('submit');
+        let select = document.getElementById("select");
+
+        document.addEventListener("submit", (event) => {
+            event.preventDefault();
+            console.log(name.value);
+            console.log(number.value);
+            console.log(select.value);
+        })
+
+        select.addEventListener("change", () => {
+            console.log(select.value);
+        })
+
+
     </script>
 </body>
 
