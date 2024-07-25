@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            color: white;
+            border: 6px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        p {
+            color: white;
+            font-size: 1rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="c">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quis optio quas dicta officia cupiditate
+            nam, culpa qui. Quidem, nulla eum quibusdam consequatur nobis quae vel possimus saepe placeat accusamus.
+        </p>
+    </div>
+    <script>
+        let container = document.getElementById("c")
+        container.addEventListener("mouseover", () => {
+            container.style.border = "6px solid green";
+        })
+    </script>
+</body>
+
+</html>
