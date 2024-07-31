@@ -13,3 +13,4 @@ function numToFact(num){
 
 let fact = numToFact(5)
 console.log(fact);
+//done
