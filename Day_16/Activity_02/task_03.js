@@ -1,12 +1,13 @@
-function Id(){
-    let id = 1;
-    return function genratId(){
-        return id++;
+function max(arr) {
+    if (arr.length === 0) {
+      return 0;
     }
-}
+    else {
+      return arr[0] > max(arr.slice(1));
+    }
+  }
+  
 
-let id = Id();
+  const arr = [1,2,3,4,5];
 
-console.log(id());
-console.log(id());
-console.log(id());
+  console.log(max(arr));

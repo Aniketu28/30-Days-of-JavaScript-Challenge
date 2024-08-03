@@ -1,17 +1,9 @@
-function createArray(num) {
-    let arr = [];
-
-    for (let i = 0; i < num; i++) {
-        arr.push(function() {
-            console.log(i);
-        });
+function reverseString(str) {
+    if (str.length <= 1) {
+      return str;
     }
-
-    return arr;
-}
-
-let fun = createArray(10);
-
-for (let i = 0; i < fun.length; i++) {
-    fun[i](); 
-}
+    return reverseString(str.slice(1)) + str[0];
+  }
+  
+const str = "Aniket";
+console.log(reverseString(str));
